@@ -8,10 +8,10 @@
 #   mainyaa(Kazuyuki Mori)
 
 module.exports = (robot) ->
-  robot.respond /image (.*)/i, (msg) ->
+  robot.respond /class (.*)/i, (msg) ->
     # Send POST request
     request = require 'request'
-    endpoint = 'https://104.199.219.49/api/url?q=' + msg.match[1]
+    endpoint = 'http://104.199.219.49/api/url?q=' + msg.match[1]
     request.get
       url: endpoint
     , (err, response, body) ->
