@@ -7,8 +7,6 @@
 # Author:
 #   mainyaa(Kazuyuki Mori)
 
-_ = require 'lodash'
-
 module.exports = (robot) ->
   robot.respond /class +(.*)/i, (msg) ->
     # Send POST request
@@ -18,7 +16,5 @@ module.exports = (robot) ->
       url: endpoint
     , (err, response, body) ->
       # Reply
-      _.keys body, (key) ->
-        body[key] = (body[key] * 100) + "%"
       msg.reply "TensorFlow で画像分類したよ\n```\n#{body}\n```"
 
