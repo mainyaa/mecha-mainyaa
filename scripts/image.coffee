@@ -7,6 +7,8 @@
 # Author:
 #   mainyaa(Kazuyuki Mori)
 
+_ = require 'lodash'
+
 module.exports = (robot) ->
   robot.respond /class +(.*)/i, (msg) ->
     # Send POST request
