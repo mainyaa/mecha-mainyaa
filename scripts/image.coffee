@@ -16,6 +16,5 @@ module.exports = (robot) ->
       url: endpoint
     , (err, response, body) ->
       # Reply
-      result = JSON.stringify body, null, 2
-      msg.reply "TensorFlow で画像分類したよ\n```\n#{result}\n```"
+      msg.reply "TensorFlow で画像分類したよ\n```\n#{body}\n```"
 
