@@ -18,14 +18,7 @@ module.exports = (robot) ->
       url: endpoint
     , (err, response, body) ->
       # Reply
-      list = []
-      _.keys body, (k) ->
-        obj = {
-          name: k
-          value: body[k]
-        }
-        list.append obj
-      list = _.sortBy list, "value"
-      list = _.map list, (item) -> item.value = (item.value * 100 ) + "%"
-      msg.reply "TensorFlow で画像分類したよ\n```\n#{list}\n```"
+      _.keys body, (key) ->
+        body[key] = (body[key] * 100) + "%"
+      msg.reply "TensorFlow で画像分類したよ\n```\n#{body}\n```"
 
