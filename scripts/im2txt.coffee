@@ -16,5 +16,5 @@ module.exports = (robot) ->
       url: endpoint
     , (err, response, body) ->
       # Reply
-      msg.reply "TensorFlow ã§ç”»åƒã‹ã‚‰æ–‡å­—ç”Ÿæˆã—ãŸã‚ˆ\n```\n#{body}\n```"
+      msg.reply "TensorFlow ‚Å‰æ‘œ‚©‚ç•¶š¶¬‚µ‚½‚æ\n```\n#{body}\n```"
 

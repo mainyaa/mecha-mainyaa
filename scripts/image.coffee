@@ -11,7 +11,7 @@ module.exports = (robot) ->
   robot.respond /class +(.*)/i, (msg) ->
     # Send POST request
     request = require 'request'
-    endpoint = 'http://104.199.219.49/api/url?q=' + msg.match[1]
+    endpoint = 'http://104.199.219.49:8000/api/url?q=' + msg.match[1]
     request.get
       url: endpoint
     , (err, response, body) ->
